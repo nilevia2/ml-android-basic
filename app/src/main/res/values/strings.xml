@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Bakulan</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="error_no_image">No image selected</string>
+    <string name="error_detection">Error detection: %1s</string>
+    <string name="button_gallery">Gallery</string>
+    <string name="button_camera">Camera</string>
+    <string name="button_live_camera">Live Camera</string>
+    <string name="button_analyz">Start Analyze</string>
+    <string name="button_object_detection">Object Detection</string>
+</resources>
