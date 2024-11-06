@@ -60,14 +60,7 @@ class ObjectDetector(
         imageProxy.use { bitmapTmp.copyPixelsFromBuffer(imageProxy.planes[0].buffer) }
         imageProxy.close()
 
-        // create tensor image
         val tensorImage = imageProcessor.process(TensorImage.fromBitmap(bitmapTmp))
-
-        // add processing option before classify
-//        val imageProcessingOptions = ImageProcessingOptions.builder()
-//            .setOrientation(getOrientationFromRotation(imageProxy.imageInfo.rotationDegrees))
-//            .build()
-
         val result = objectDetector?.detect(tensorImage)
         classifierListener?.onSuccess(
             result,

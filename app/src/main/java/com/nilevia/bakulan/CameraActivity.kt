@@ -1,24 +1,18 @@
 package com.nilevia.bakulan
 
-import android.media.Image
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
-import androidx.camera.core.ImageProxy
 import androidx.camera.core.Preview
 import androidx.camera.core.resolutionselector.AspectRatioStrategy
 import androidx.camera.core.resolutionselector.ResolutionSelector
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.nilevia.bakulan.databinding.ActivityCameraBinding
-import com.nilevia.bakulan.databinding.ActivityMainBinding
 import com.nilevia.bakulan.utils.Classifier
 import com.nilevia.bakulan.utils.Constants.INTENT_MODE
 import org.tensorflow.lite.task.vision.classifier.Classifications

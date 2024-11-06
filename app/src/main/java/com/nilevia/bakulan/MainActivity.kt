@@ -57,10 +57,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    /**
-     * open media manager to select one image
-     */
     private fun startGallery() {
         launcherGallery.launch(
             PickVisualMediaRequest(
@@ -82,10 +78,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    /**
-     * open default device camera using Intent
-     */
     private fun startCamera() {
         currentImageUri = getImageUri(this).also {
             launcherIntentCamera.launch(it)
@@ -93,9 +85,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    /**
-     * require uri to store captured image
-     */
+
     private val launcherIntentCamera = registerForActivityResult(
         ActivityResultContracts.TakePicture()
     ) { isSuccess ->
@@ -107,9 +97,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    /**
-     * live button using cameraX
-     */
     private fun startLiveDetector(){
         val intent = Intent(this, CameraActivity::class.java).apply {
             putExtra(INTENT_MODE, MODE_IMAGE_DETECTOR)

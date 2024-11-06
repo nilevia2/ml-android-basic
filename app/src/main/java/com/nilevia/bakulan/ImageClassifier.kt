@@ -62,7 +62,8 @@ class ImageClassifier(
             MediaStore.Images.Media.getBitmap(context.contentResolver, imageUri)
         }.copy(Bitmap.Config.ARGB_8888, true)?.let { bitmap ->
             // bitmap to TensorImage
-            // A mutable Bitmap allows you to modify its pixels, which is helpful for editing, drawing, or applying transformations.
+            // A mutable Bitmap allows you to modify its pixels,
+            // which is helpful for editing, drawing, or applying transformations.
             val tensorImage = imageProcessor?.process(TensorImage.fromBitmap(bitmap))
 
             val result = imageClassifier?.classify(tensorImage)
